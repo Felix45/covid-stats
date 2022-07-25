@@ -2,7 +2,7 @@
 
 # COVID STATS
 
-> This web application provides statistical insights on COVI-19 cases around the world. The application allows users to filter through the information by different continents and countries..
+> This web application provides statistical insights on COVID-19 cases around the world. The application allows users to filter through the information by different continents and countries..
 
 ## Built With
 
