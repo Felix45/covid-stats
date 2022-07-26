@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
 import { fetchStatsThunk } from '../redux/slices/covidSlice';
 import ContinentList from './ContinentList';
 import continents from '../mock/data';
@@ -25,9 +24,7 @@ const ContinentView = () => {
 
   return (
     <Container>
-      <Row>
-        <ContinentList stats={stats} regions={regions} />
-      </Row>
+      <ContinentList stats={stats} regions={regions} />
     </Container>
   );
 };
