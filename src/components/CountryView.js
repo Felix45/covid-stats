@@ -1,12 +1,15 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import { useParams } from 'react-router-dom';
+import CountryList from './CountryList';
 
 const CountryView = () => {
   const { continent } = useParams();
+  const { stats } = useSelector((state) => state.stats);
 
   return (
     <Container>
@@ -21,6 +24,9 @@ const CountryView = () => {
             <Card.Title>{ continent }</Card.Title>
           </Card>
         </Col>
+      </Row>
+      <Row>
+        <CountryList continent={continent} countries={stats} />
       </Row>
     </Container>
   );

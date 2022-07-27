@@ -15,7 +15,7 @@ const ContinentView = () => {
   const [regions] = useState(continents);
   const { stats } = useSelector((state) => state.stats);
 
-  regions.map((region) => (region.cases = 0));
+  regions.forEach((region) => { region.cases = 0; });
 
   regions.map((region) => {
     Object.keys(stats).forEach((stat) => {
