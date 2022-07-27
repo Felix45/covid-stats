@@ -43,6 +43,13 @@ const continents = [
     cases: 0,
     image: 'south america.png',
   },
+  {
+    id: uuidv4(),
+    name: 'Oceania',
+    map: '',
+    cases: 0,
+    image: 'antarctica.png',
+  },
 ];
 
 export default continents;
