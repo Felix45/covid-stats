@@ -10,6 +10,7 @@ import CountryList from './CountryList';
 const CountryView = () => {
   const { continent } = useParams();
   const { stats } = useSelector((state) => state.stats);
+  const { countries } = useSelector((state) => state.countries);
 
   return (
     <Container>
@@ -26,7 +27,7 @@ const CountryView = () => {
         </Col>
       </Row>
       <Row>
-        <CountryList continent={continent} countries={stats} />
+        <CountryList continent={continent} countries={stats} nations={countries} />
       </Row>
     </Container>
   );

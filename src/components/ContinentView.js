@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Container from 'react-bootstrap/Container';
 import { fetchStatsThunk } from '../redux/slices/covidSlice';
+import { fetchCountriesThunk } from '../redux/slices/countriesSlice';
 import ContinentList from './ContinentList';
 import continents from '../mock/data';
 
@@ -10,6 +11,7 @@ const ContinentView = () => {
 
   useEffect(() => {
     dispatch(fetchStatsThunk());
+    dispatch(fetchCountriesThunk());
   }, []);
 
   const [regions] = useState(continents);
