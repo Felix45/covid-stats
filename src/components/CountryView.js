@@ -14,7 +14,7 @@ const CountryView = () => {
 
   return (
     <Container>
-      <Row>
+      <Row className="slider">
         <Col xs={6}>
           <Card>
             <Card.Img src={`${process.env.PUBLIC_URL}/images/${continent.toLowerCase()}.png`} />

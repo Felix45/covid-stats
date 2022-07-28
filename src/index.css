@@ -16,6 +16,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root {
+  --white: #fff;
+  --menuBarBlue: #4369b2;
+  --sliderBlue: #5283e0;
+  --stripBlue: #35548b;
+  --leftMap: #446ab3;
+  --rightMap: #4063a5;
+}
+
 code {
   font-family:
     source-code-pro,
@@ -32,15 +41,50 @@ header {
   right: 0;
   z-index: 9999;
   position: sticky;
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
-  box-shadow: 2px 2px 5px #ddd;
+  color: var(--white);
+  background-color: var(--menuBarBlue);
+  box-shadow: 2px 2px 5px var(--menuBarBlue);
 }
 
 nav ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+nav ul span {
+  color: var(--white);
+}
+
+.slider .card {
+  color: var(--white);
+  border-radius: 0;
+  background-color: var(--sliderBlue);
+}
+
+.title-strip {
+  color: var(--white);
+  background-color: var(--stripBlue);
+}
+
+.continent .card {
+  border-radius: 0;
+  border-top: none;
+  border-left: none;
+  border-color: var(--white);
+  background-color: transparent;
+}
+
+.continent {
+  color: var(--white);
+  background-color: var(--sliderBlue);
+}
+
+.continent.asia,
+.continent.europe,
+.continent.south,
+.continent.oceania {
+  background-color: var(--rightMap);
 }
 
 .map-wrapper {

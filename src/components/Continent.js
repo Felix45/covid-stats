@@ -7,16 +7,16 @@ import { NavLink } from 'react-router-dom';
 const Continent = (props) => {
   const { region } = props;
   return (
-    <Col xs={6} className="my-3">
+    <Col xs={6} className={`m-0 p-0 continent ${region.name.toLowerCase()}`}>
       <Card>
         <NavLink to={`/continent/${region.name}`}>
-          <Card.Img src={`${process.env.PUBLIC_URL}/images/${region.image}`} />
+          <Card.Img className="pt-2" src={`${process.env.PUBLIC_URL}/images/${region.image}`} />
         </NavLink>
-        <Card.Body>
-          <div>
-            <h2>{region.name}</h2>
+        <Card.Body class="text-end mb-2">
+          <div className="mx-3">
+            <h2 className="fw-bold">{region.name}</h2>
           </div>
-          <div>
+          <div className="fw-bold mx-3">
             <strong>
               Cases
               <br />
