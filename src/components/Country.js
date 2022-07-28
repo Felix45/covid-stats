@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import ListGroup from 'react-bootstrap/ListGroup';
+import { NavLink } from 'react-router-dom';
 
 const Country = (props) => {
   const { nation, nations } = props;
@@ -19,11 +20,12 @@ const Country = (props) => {
   return (
     <Col xs={6} className="my-2">
       <Card className="p-2">
-        <Card.Title>
-          {country}
-          {' '}
+        <NavLink to={`/country/${country}`} className="d-flex justify-content-between">
+          <Card.Title>
+            {country}
+          </Card.Title>
           {countryFlag}
-        </Card.Title>
+        </NavLink>
         <Card.Body className="p-0">
           <ListGroup>
             <ListGroup.Item>
