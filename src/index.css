@@ -30,11 +30,11 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 9999;
   position: sticky;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
-  box-sizing: 2px 5px 5px #ddd;
+  box-shadow: 2px 2px 5px #ddd;
 }
 
 nav ul {

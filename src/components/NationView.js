@@ -35,7 +35,7 @@ const NationView = () => {
       <Row>
         <Col xs={12}>
           <Card>
-            <Card.Title className="px-3 py-2">
+            <Card.Title className="px-3 py-2 p-b-1 m-0">
               { countryFlag }
               {' '}
               { nation }
@@ -62,11 +62,11 @@ const NationView = () => {
                 <tbody>
                   <tr>
                     <td>Cases</td>
-                    <td>{ confirmed.toLocaleString('en-US') }</td>
+                    <td>{ confirmed && confirmed.toLocaleString('en-US') }</td>
                   </tr>
                   <tr>
                     <td>Fatalities</td>
-                    <td>{ deaths.toLocaleString('en-US') }</td>
+                    <td>{ deaths && deaths.toLocaleString('en-US') }</td>
                   </tr>
                   <tr>
                     <td>Continent</td>
@@ -80,15 +80,12 @@ const NationView = () => {
       </Row>
       <Row>
         <Col xs={12} className="my-3">
-          <h3>
-            More about
-            { nation }
-          </h3>
+          <h3>{`More about ${nation} ${countryFlag}`}</h3>
           <Table table striped>
             <tbody>
               <tr>
                 <td>Population</td>
-                <td>{ population.toLocaleString('en-US') }</td>
+                <td>{ population && population.toLocaleString('en-US') }</td>
               </tr>
               <tr>
                 <td>Affected Population</td>
