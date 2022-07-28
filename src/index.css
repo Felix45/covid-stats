@@ -25,3 +25,17 @@ code {
     'Courier New',
     monospace;
 }
+
+.map-wrapper {
+  width: 100%;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.leaflet-container {
+  height: 400px;
+}
