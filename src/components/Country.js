@@ -20,11 +20,11 @@ const Country = (props) => {
   return (
     <Col xs={6} className="my-2">
       <Card className="p-2">
-       <NavLink to={`/country/${country}`} className="d-flex justify-content-between">
-         <Card.Title>
-          {country}
-        </Card.Title>
-        {countryFlag}
+        <NavLink to={`/country/${country}`} className="d-flex justify-content-between">
+          <Card.Title>
+            {country}
+          </Card.Title>
+          {countryFlag}
         </NavLink>
         <Card.Body className="p-0">
           <ListGroup>
