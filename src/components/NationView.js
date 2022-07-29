@@ -69,15 +69,15 @@ const NationView = () => {
                 <tbody>
                   <tr>
                     <td>Cases</td>
-                    <td>{ confirmed && confirmed.toLocaleString('en-US') }</td>
+                    <td className="text-end">{ confirmed && confirmed.toLocaleString('en-US') }</td>
                   </tr>
                   <tr>
                     <td>Fatalities</td>
-                    <td>{ deaths && deaths.toLocaleString('en-US') }</td>
+                    <td className="text-end">{ deaths && deaths.toLocaleString('en-US') }</td>
                   </tr>
                   <tr>
                     <td>Continent</td>
-                    <td>{ continent }</td>
+                    <td className="text-end">{ continent }</td>
                   </tr>
                 </tbody>
               </Table>
@@ -92,11 +92,11 @@ const NationView = () => {
             <tbody>
               <tr>
                 <td>Population</td>
-                <td>{ population && population.toLocaleString('en-US') }</td>
+                <td className="text-end">{ population && population.toLocaleString('en-US') }</td>
               </tr>
               <tr>
                 <td>Affected Population</td>
-                <td>
+                <td className="text-end">
                   { Math.round(((confirmed + deaths) / population) * 100) + 1 }
                   {' '}
                   %
@@ -104,7 +104,7 @@ const NationView = () => {
               </tr>
               <tr>
                 <td>Life Expectancy</td>
-                <td>
+                <td className="text-end">
                   { lifeExpectancy }
                   {' '}
                   Yrs
