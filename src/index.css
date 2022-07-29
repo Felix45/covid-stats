@@ -1,19 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
 body {
   margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Lato', sans-serif;
+}
+
+:root {
+  --white: #fff;
+  --menuBarBlue: #4369b2;
+  --sliderBlue: #5283e0;
+  --stripBlue: #35548b;
+  --leftMap: #446ab3;
+  --rightMap: #4063a5;
 }
 
 code {
@@ -24,4 +24,140 @@ code {
     Consolas,
     'Courier New',
     monospace;
+}
+
+header {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  position: sticky;
+  color: var(--white);
+  background-color: var(--menuBarBlue);
+  box-shadow: 2px 2px 5px var(--menuBarBlue);
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+nav ul span {
+  color: var(--white);
+}
+
+select {
+  width: 100%;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+.slider,
+.country {
+  background-color: var(--sliderBlue);
+}
+
+.slider .card {
+  color: var(--white);
+  border-radius: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.slider .card-title {
+  top: 65px;
+  position: absolute;
+}
+
+.title-strip {
+  color: var(--white);
+  background-color: var(--stripBlue);
+}
+
+.continent .card,
+.country .card {
+  border-radius: 0;
+  border-top: none;
+  border-left: none;
+  border-color: var(--white);
+  background-color: transparent;
+}
+
+.country .card {
+  border-color: var(--sliderBlue);
+}
+
+.country .card .card-title {
+  font-size: 18px;
+  color: var(--white);
+}
+
+.country .card .card-header {
+  border: none;
+  color: var(--white);
+  background-color: transparent;
+}
+
+.country .list-group,
+.country .list-group-item {
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.country:nth-child(4n+1),
+.country:nth-child(4n) {
+  color: var(--white);
+  background-color: var(--rightMap);
+}
+
+.continent {
+  color: var(--white);
+  background-color: var(--sliderBlue);
+}
+
+.continent.asia,
+.continent.europe,
+.continent.south,
+.continent.oceania {
+  background-color: var(--rightMap);
+}
+
+.table {
+  font-weight: bold;
+}
+
+.table tr,
+.table td {
+  border: none;
+}
+
+.table-striped tbody tr:nth-of-type(odd) > * {
+  color: var(--white) !important;
+  background-color: var(--sliderBlue);
+}
+
+.table-striped tbody tr:nth-of-type(even) > * {
+  color: var(--white) !important;
+  background-color: var(--stripBlue);
+}
+
+.map-wrapper {
+  width: 100%;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.leaflet-container {
+  height: 400px;
+}
+
+.fa-arrow-circle-right {
+  color: var(--white);
 }

@@ -1,0 +1,371 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test continent list renders correctly Test continent list renders correctly 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="p-0 slider col-12"
+  >
+    <div
+      className="card"
+    >
+      <img
+        className="card-img"
+        src="/images/world.png"
+      />
+      <div
+        className="px-3 fw-bold card-title h5"
+        data-testid="title"
+      >
+        COVID WORLD STATS
+      </div>
+      <p
+        className="p-3 mb-0 fw-bold card-text"
+      >
+        <strong>
+          Cases: 0
+        </strong>
+      </p>
+    </div>
+  </div>
+  <div
+    className="p-3 py-2 title-strip col-12"
+  >
+    <h5
+      className="fw-bold m-0 py-2"
+    >
+      Total cases per continent
+    </h5>
+  </div>
+  <div
+    className="m-0 p-0 continent africa col-6"
+  >
+    <div
+      className="card"
+    >
+      <a
+        className=""
+        href="/continent/Africa"
+        onClick={[Function]}
+      >
+        <div
+          className="p-2 text-end card-header"
+        >
+          <span
+            className="fa fa-arrow-circle-right fa-lg"
+          />
+        </div>
+        <img
+          className="card-img pt-2"
+          src="/images/africa.png"
+        />
+      </a>
+      <div
+        className="text-end mb-2 card-body"
+      >
+        <div
+          className="mx-3"
+        >
+          <h2
+            className="fw-bold"
+          >
+            Africa
+          </h2>
+        </div>
+        <div
+          className="fw-bold mx-3"
+        >
+          <strong>
+            Cases
+            <br />
+            0
+          </strong>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="m-0 p-0 continent asia col-6"
+  >
+    <div
+      className="card"
+    >
+      <a
+        className=""
+        href="/continent/Asia"
+        onClick={[Function]}
+      >
+        <div
+          className="p-2 text-end card-header"
+        >
+          <span
+            className="fa fa-arrow-circle-right fa-lg"
+          />
+        </div>
+        <img
+          className="card-img pt-2"
+          src="/images/asia.png"
+        />
+      </a>
+      <div
+        className="text-end mb-2 card-body"
+      >
+        <div
+          className="mx-3"
+        >
+          <h2
+            className="fw-bold"
+          >
+            Asia
+          </h2>
+        </div>
+        <div
+          className="fw-bold mx-3"
+        >
+          <strong>
+            Cases
+            <br />
+            0
+          </strong>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="m-0 p-0 continent europe col-6"
+  >
+    <div
+      className="card"
+    >
+      <a
+        className=""
+        href="/continent/Europe"
+        onClick={[Function]}
+      >
+        <div
+          className="p-2 text-end card-header"
+        >
+          <span
+            className="fa fa-arrow-circle-right fa-lg"
+          />
+        </div>
+        <img
+          className="card-img pt-2"
+          src="/images/europe.png"
+        />
+      </a>
+      <div
+        className="text-end mb-2 card-body"
+      >
+        <div
+          className="mx-3"
+        >
+          <h2
+            className="fw-bold"
+          >
+            Europe
+          </h2>
+        </div>
+        <div
+          className="fw-bold mx-3"
+        >
+          <strong>
+            Cases
+            <br />
+            0
+          </strong>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="m-0 p-0 continent antarctica col-6"
+  >
+    <div
+      className="card"
+    >
+      <a
+        className=""
+        href="/continent/Antarctica"
+        onClick={[Function]}
+      >
+        <div
+          className="p-2 text-end card-header"
+        >
+          <span
+            className="fa fa-arrow-circle-right fa-lg"
+          />
+        </div>
+        <img
+          className="card-img pt-2"
+          src="/images/antarctica.png"
+        />
+      </a>
+      <div
+        className="text-end mb-2 card-body"
+      >
+        <div
+          className="mx-3"
+        >
+          <h2
+            className="fw-bold"
+          >
+            Antarctica
+          </h2>
+        </div>
+        <div
+          className="fw-bold mx-3"
+        >
+          <strong>
+            Cases
+            <br />
+            0
+          </strong>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="m-0 p-0 continent north america col-6"
+  >
+    <div
+      className="card"
+    >
+      <a
+        className=""
+        href="/continent/North America"
+        onClick={[Function]}
+      >
+        <div
+          className="p-2 text-end card-header"
+        >
+          <span
+            className="fa fa-arrow-circle-right fa-lg"
+          />
+        </div>
+        <img
+          className="card-img pt-2"
+          src="/images/north america.png"
+        />
+      </a>
+      <div
+        className="text-end mb-2 card-body"
+      >
+        <div
+          className="mx-3"
+        >
+          <h2
+            className="fw-bold"
+          >
+            North America
+          </h2>
+        </div>
+        <div
+          className="fw-bold mx-3"
+        >
+          <strong>
+            Cases
+            <br />
+            0
+          </strong>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="m-0 p-0 continent south america col-6"
+  >
+    <div
+      className="card"
+    >
+      <a
+        className=""
+        href="/continent/South America"
+        onClick={[Function]}
+      >
+        <div
+          className="p-2 text-end card-header"
+        >
+          <span
+            className="fa fa-arrow-circle-right fa-lg"
+          />
+        </div>
+        <img
+          className="card-img pt-2"
+          src="/images/south america.png"
+        />
+      </a>
+      <div
+        className="text-end mb-2 card-body"
+      >
+        <div
+          className="mx-3"
+        >
+          <h2
+            className="fw-bold"
+          >
+            South America
+          </h2>
+        </div>
+        <div
+          className="fw-bold mx-3"
+        >
+          <strong>
+            Cases
+            <br />
+            0
+          </strong>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="m-0 p-0 continent oceania col-6"
+  >
+    <div
+      className="card"
+    >
+      <a
+        className=""
+        href="/continent/Oceania"
+        onClick={[Function]}
+      >
+        <div
+          className="p-2 text-end card-header"
+        >
+          <span
+            className="fa fa-arrow-circle-right fa-lg"
+          />
+        </div>
+        <img
+          className="card-img pt-2"
+          src="/images/antarctica.png"
+        />
+      </a>
+      <div
+        className="text-end mb-2 card-body"
+      >
+        <div
+          className="mx-3"
+        >
+          <h2
+            className="fw-bold"
+          >
+            Oceania
+          </h2>
+        </div>
+        <div
+          className="fw-bold mx-3"
+        >
+          <strong>
+            Cases
+            <br />
+            0
+          </strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

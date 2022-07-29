@@ -2,7 +2,7 @@
 
 # COVID STATS
 
-> This web application provides statistical insights on COVI-19 cases around the world. The application allows users to filter through the information by different continents and countries..
+> This web application provides statistical insights on COVID-19 cases around the world. The application allows users to filter through the information by different continents and countries..
 
 ## Built With
 
@@ -13,7 +13,18 @@
 ## Live Demo
 |Netlify cloud hosting|
 |----------------------|
-|[Not available]()|
+|[View live demo](https://deploy-preview-9--imaginative-liger-4aee95.netlify.app/)|
+
+## Demo Video link
+|Link to demo video|
+|----------------------|
+|[Demo video link](https://www.loom.com/share/f2894211121e4eadaf148854a0aec385/)|
+
+## Application ScreenShot
+![Homepage](/public/images/app.png)
+![Country listing page](/public/images/app2.png)
+![Country listing page](/public/images/app3.png)
+
 
 ## Getting Started
 
@@ -41,6 +52,14 @@ Install all project dependencies by running the command below
 ``` 
 $ npm install
 ```
+
+### Tests
+To run all tests type the command below
+ 
+``` 
+$ npm test
+```
+
 ### Usage
 Start the http application server
 ``` 
@@ -73,7 +92,13 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Hat tip to [Microverse](https://bit.ly/MicroverseTN) for giving me this project to work on
+- Special thanks to  [Nelson Sakwa](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)) for the design used in this project [behance.net](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
 
+- Special thanks to  [OpenStreetMap](https://www.openstreetmap.org/#map=0/59/-46) for the maps used in this project 
+
+- Special thanks to  [MMediaGroup.fr](https://mmediagroup.fr/covid-19) for the COVID statistics [API](https://covid-api.mmediagroup.fr/v1) used in this project
+
+- Special thanks to  [Rest countries](https://restcountries.com/v3/all) for the Population statistics [API](https://restcountries.com/v3/all) used in this project
 
 ## 📝 License
 

@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test if navBar renders correctly Test if navBar renders correctly 1`] = `
+<header>
+  <nav
+    className="d-flex justify-content-between p-3"
+  >
+    <ul>
+      <li>
+        <a
+          aria-current="page"
+          className="active"
+          href="/"
+          onClick={[Function]}
+          role="button"
+        >
+          <span
+            className="fa fa-chevron-left fa-lg"
+          />
+        </a>
+      </li>
+    </ul>
+    <div>
+      <span>
+        <strong>
+          World
+        </strong>
+      </span>
+    </div>
+    <div>
+      <span
+        className="fa fa-microphone fa-lg mx-3"
+      />
+      <span
+        className="fa fa-cog fa-lg"
+      />
+    </div>
+  </nav>
+</header>
+`;
