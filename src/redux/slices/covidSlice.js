@@ -18,6 +18,11 @@ export const fetchStatsThunk = createAsyncThunk(
 const statsSlice = createSlice({
   name: 'stats',
   initialState,
+  reducers: {
+    filterCountries(state, action) {
+      state.stats = action.payload;
+    },
+  },
   extraReducers: {
     [fetchStatsThunk.fulfilled]: (state, action) => {
       state.isLoading = false;
@@ -28,4 +33,5 @@ const statsSlice = createSlice({
   },
 });
 
+export const { filterCountries } = statsSlice.actions;
 export default statsSlice.reducer;
