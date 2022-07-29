@@ -11,8 +11,8 @@ describe('Test single continent renders correctly', () => {
     const Tree = renderer.create(
       <Provider store={store()}>
         <BrowserRouter>
-          <Continent region={continents[0]}/>
-        </BrowserRouter> 
+          <Continent region={continents[0]} />
+        </BrowserRouter>
       </Provider>,
     );
     expect(Tree).toMatchSnapshot();

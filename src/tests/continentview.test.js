@@ -11,7 +11,7 @@ describe('Test Continent view renders correctly', () => {
       <Provider store={store()}>
         <BrowserRouter>
           <ContinentView />
-        </BrowserRouter> 
+        </BrowserRouter>
       </Provider>,
     );
     expect(Tree).toMatchSnapshot();
