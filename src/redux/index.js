@@ -9,6 +9,6 @@ const reducer = {
   title: navReducer,
 };
 
-const store = configureStore({ reducer });
+const store = (preloadedState) => configureStore({ reducer, preloadedState });
 
 export default store;
