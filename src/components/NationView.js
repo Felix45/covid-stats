@@ -65,7 +65,7 @@ const NationView = () => {
                   </Marker>
                 </MapContainer>
               </div>
-              <Table striped bordered className="mt-4">
+              <Table striped className="mt-4">
                 <tbody>
                   <tr>
                     <td>Cases</td>
@@ -87,7 +87,7 @@ const NationView = () => {
       </Row>
       <Row>
         <Col xs={12} className="m-0 my-3 p-0">
-          <h3 className="title-strip p-2 mb-0">{`More about ${nation} ${countryFlag}`}</h3>
+          <h5 className="title-strip p-2 mb-0">{`More about ${nation} ${countryFlag}`}</h5>
           <Table table striped>
             <tbody>
               <tr>

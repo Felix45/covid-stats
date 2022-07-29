@@ -26,7 +26,7 @@ const Country = (props) => {
           </Card.Title>
           {countryFlag}
           <Card.Header className="p-0 px-2">
-            <span className="fa fa-chevron-right fa-lg" />
+            <span className="fa fa-arrow-circle-right fa-lg" />
           </Card.Header>
         </NavLink>
         <Card.Body className="p-0 py-2">

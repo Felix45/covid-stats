@@ -10,6 +10,9 @@ const Continent = (props) => {
     <Col xs={6} className={`m-0 p-0 continent ${region.name.toLowerCase()}`}>
       <Card>
         <NavLink to={`/continent/${region.name}`}>
+          <Card.Header className="p-2 text-end">
+            <span className="fa fa-arrow-circle-right fa-lg" />
+          </Card.Header>
           <Card.Img className="pt-2" src={`${process.env.PUBLIC_URL}/images/${region.image}`} />
         </NavLink>
         <Card.Body className="text-end mb-2">
