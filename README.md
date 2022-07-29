@@ -10,15 +10,21 @@
 - CSS
 - JavaScript
 
+## Live Demo
+|Netlify cloud hosting|
+|----------------------|
+|[View live demo](https://deploy-preview-9--imaginative-liger-4aee95.netlify.app/)|
+
+## Demo Video link
+|Link to demo video|
+|----------------------|
+|[Demo video link](https://www.loom.com/share/f2894211121e4eadaf148854a0aec385/)|
+
 ## Application ScreenShot
 ![Homepage](/public/images/app.png)
 ![Country listing page](/public/images/app2.png)
 ![Country listing page](/public/images/app3.png)
 
-## Live Demo
-|Netlify cloud hosting|
-|----------------------|
-|[View live demo](https://deploy-preview-9--imaginative-liger-4aee95.netlify.app/)|
 
 ## Getting Started
 
