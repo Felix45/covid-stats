@@ -1,16 +1,23 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import { useParams } from 'react-router-dom';
 import CountryList from './CountryList';
+import { fetchTitleThunk } from '../redux/slices/navbarSlice';
 
 const CountryView = () => {
+  const dispatch = useDispatch();
+
   const { continent } = useParams();
   const { stats } = useSelector((state) => state.stats);
   const { countries } = useSelector((state) => state.countries);
+
+  useEffect(() => {
+    dispatch(fetchTitleThunk(continent));
+  }, []);
 
   return (
     <Container>

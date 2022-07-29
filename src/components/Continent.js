@@ -12,7 +12,7 @@ const Continent = (props) => {
         <NavLink to={`/continent/${region.name}`}>
           <Card.Img className="pt-2" src={`${process.env.PUBLIC_URL}/images/${region.image}`} />
         </NavLink>
-        <Card.Body class="text-end mb-2">
+        <Card.Body className="text-end mb-2">
           <div className="mx-3">
             <h2 className="fw-bold">{region.name}</h2>
           </div>
