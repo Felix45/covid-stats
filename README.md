@@ -10,6 +10,12 @@
 - CSS
 - JavaScript
 
+## Application ScreenShot
+![Homepage](/public/images/app.png)
+![Country listing page](/public/images/app2.png)
+
+![Country listing page](/public/images/app3.png)
+
 ## Live Demo
 |Netlify cloud hosting|
 |----------------------|
@@ -87,7 +93,7 @@ Give a ⭐️ if you like this project!
 
 - Special thanks to  [MMediaGroup.fr](https://mmediagroup.fr/covid-19) for the COVID statistics [API](https://covid-api.mmediagroup.fr/v1) used in this project
 
-- Special thanks to  [Rest countries](https://restcountries.com/v3/all) for the COVID statistics [API](https://restcountries.com/v3/all) used in this project
+- Special thanks to  [Rest countries](https://restcountries.com/v3/all) for the Population statistics [API](https://restcountries.com/v3/all) used in this project
 
 ## 📝 License
 
