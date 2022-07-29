@@ -52,4 +52,12 @@ const continents = [
   },
 ];
 
+export const filterRanges = [
+  { lower: 0, higher: 100000 },
+  { lower: 100001, higher: 300000 },
+  { lower: 300001, higher: 500000 },
+  { lower: 500001, higher: 1000000 },
+  { lower: 1000001, higher: 2000000 },
+];
+
 export default continents;
