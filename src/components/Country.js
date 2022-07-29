@@ -18,25 +18,34 @@ const Country = (props) => {
   });
 
   return (
-    <Col xs={6} className="my-2">
+    <Col xs={6} className="mb-3 mx-0 p-0 country">
       <Card className="p-2">
-        <NavLink to={`/country/${country}`} className="d-flex justify-content-between">
+        <NavLink to={`/country/${country}`} className="d-flex justify-content-between text-decoration-none">
           <Card.Title>
             {country}
           </Card.Title>
           {countryFlag}
+          <Card.Header className="p-0 px-2">
+            <span className="fa fa-chevron-right fa-lg" />
+          </Card.Header>
         </NavLink>
-        <Card.Body className="p-0">
-          <ListGroup>
-            <ListGroup.Item>
-              cases:
-              {confirmed.toLocaleString('en-US')}
-            </ListGroup.Item>
-            <ListGroup.Item>
-              fatalities:
-              {deaths.toLocaleString('en-US')}
-            </ListGroup.Item>
-          </ListGroup>
+        <Card.Body className="p-0 py-2">
+          <NavLink to={`/country/${country}`} className="d-block px-0 justify-content-between text-decoration-none">
+            <ListGroup>
+              <ListGroup.Item className="px-2">
+                <strong>
+                  cases:
+                  {confirmed.toLocaleString('en-US')}
+                </strong>
+              </ListGroup.Item>
+              <ListGroup.Item className="px-2">
+                <strong>
+                  fatalities:
+                  {deaths.toLocaleString('en-US')}
+                </strong>
+              </ListGroup.Item>
+            </ListGroup>
+          </NavLink>
         </Card.Body>
       </Card>
     </Col>

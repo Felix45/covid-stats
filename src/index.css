@@ -56,10 +56,25 @@ nav ul span {
   color: var(--white);
 }
 
+.pos-rel {
+  position: relative;
+}
+
+.slider,
+.country {
+  background-color: var(--sliderBlue);
+}
+
 .slider .card {
   color: var(--white);
   border-radius: 0;
-  background-color: var(--sliderBlue);
+  border: none;
+  background-color: transparent;
+}
+
+.slider .card-title {
+  top: 65px;
+  position: absolute;
 }
 
 .title-strip {
@@ -67,12 +82,39 @@ nav ul span {
   background-color: var(--stripBlue);
 }
 
-.continent .card {
+.continent .card,
+.country .card {
   border-radius: 0;
   border-top: none;
   border-left: none;
   border-color: var(--white);
   background-color: transparent;
+}
+
+.country .card {
+  border-color: var(--sliderBlue);
+}
+
+.country .card .card-title {
+  font-size: 18px;
+  color: var(--white);
+}
+
+.country .card .card-header {
+  border: none;
+  color: var(--white);
+  background-color: transparent;
+}
+
+.country .list-group {
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.country:nth-child(4n+1),
+.country:nth-child(4n) {
+  color: var(--white);
+  background-color: var(--rightMap);
 }
 
 .continent {
