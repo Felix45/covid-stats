@@ -17,14 +17,14 @@ const NavBar = () => {
       <nav className="d-flex justify-content-between p-3">
         <ul>
           <li>
-            <NavLink to="/">
+            <NavLink to="/" role="button">
               <span className="fa fa-chevron-left fa-lg" />
             </NavLink>
           </li>
         </ul>
         <div>
           <span>
-            <strong>{title}</strong>
+            <strong>{title || 'World'}</strong>
           </span>
         </div>
         <div>

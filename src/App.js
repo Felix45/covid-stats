@@ -10,7 +10,7 @@ import NavBar from './components/NavBar';
 
 function App() {
   return (
-    <Provider store={store}>
+    <Provider store={store()}>
       <BrowserRouter>
         <NavBar />
         <Routes>
