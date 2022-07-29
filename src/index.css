@@ -1,19 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
 body {
   margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Lato', sans-serif;
 }
 
 :root {
@@ -138,9 +129,19 @@ select {
   font-weight: bold;
 }
 
+.table tr,
+.table td {
+  border: none;
+}
+
 .table-striped tbody tr:nth-of-type(odd) > * {
   color: var(--white) !important;
   background-color: var(--sliderBlue);
+}
+
+.table-striped tbody tr:nth-of-type(even) > * {
+  color: var(--white) !important;
+  background-color: var(--stripBlue);
 }
 
 .map-wrapper {
@@ -155,4 +156,8 @@ select {
 
 .leaflet-container {
   height: 400px;
+}
+
+.fa-arrow-circle-right {
+  color: var(--white);
 }
