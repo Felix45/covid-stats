@@ -106,7 +106,8 @@ nav ul span {
   background-color: transparent;
 }
 
-.country .list-group {
+.country .list-group,
+.country .list-group-item {
   border-radius: 0;
   background-color: transparent;
 }
@@ -127,6 +128,15 @@ nav ul span {
 .continent.south,
 .continent.oceania {
   background-color: var(--rightMap);
+}
+
+.table {
+  font-weight: bold;
+}
+
+.table-striped tbody tr:nth-of-type(odd) > * {
+  color: var(--white) !important;
+  background-color: var(--sliderBlue);
 }
 
 .map-wrapper {
