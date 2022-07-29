@@ -56,6 +56,10 @@ nav ul span {
   color: var(--white);
 }
 
+select {
+  width: 100%;
+}
+
 .pos-rel {
   position: relative;
 }

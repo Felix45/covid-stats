@@ -69,8 +69,7 @@ const CountryView = () => {
         <Col className="p-2">
           <select onChange={(e) => handleCountries(e.target.value)} className="d-block p-1">
             <option value="{lower: 0, higher: 0}">
-              Cases in
-              {continent}
+              {`COVID Cases in ${continent}`}
             </option>
             {
               filterRanges.map((range) => (
