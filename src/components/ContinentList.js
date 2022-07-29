@@ -11,14 +11,17 @@ const ContinentList = (props) => {
 
   return (
     <Row>
-      <Col xs={12}>
+      <Col xs={12} className="p-0 slider">
         <Card>
           <Card.Img src={`${process.env.PUBLIC_URL}/images/world.png`} />
-          <Card.Title className="px-3">COVID WORLD STATS</Card.Title>
-          <Card.Text className="p-3 py-0">
-            <strong>{total.toLocaleString('en-US')}</strong>
+          <Card.Title className="px-3 fw-bold">COVID WORLD STATS</Card.Title>
+          <Card.Text className="p-3 py-0 fw-bold">
+            <strong>{`Cases: ${total.toLocaleString('en-US')}`}</strong>
           </Card.Text>
         </Card>
+      </Col>
+      <Col xs={12} className="p-3 py-2 title-strip">
+        <h5 className="fw-bold m-0">Total cases per continent</h5>
       </Col>
       {
       regions.map((region) => (
