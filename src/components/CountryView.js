@@ -33,11 +33,11 @@ const CountryView = () => {
     Object.keys(stats).filter((stat) => {
       const confirmedCases = stats[stat].All.confirmed;
       const { country } = stats[stat].All;
-
+      newState[country] = { All: { ...stats[stat].All, show: false } };
       if (confirmedCases >= lower
         && confirmedCases <= higher
         && stats[stat].All.continent === continent) {
-        newState[country] = stats[country];
+        newState[country] = { All: { ...stats[stat].All, show: true } };
       }
       return newState;
     });
@@ -63,7 +63,7 @@ const CountryView = () => {
           <button type="button" onClick={handleReset}>
             Reset Filter
             {' '}
-            <span className="fa fa-refresh pt-1" />
+            <span className="fa fa-retweet pt-1" />
           </button>
         </Col>
         <Col className="p-2">

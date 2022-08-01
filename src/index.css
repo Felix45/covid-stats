@@ -161,3 +161,10 @@ select {
 .fa-arrow-circle-right {
   color: var(--white);
 }
+
+@media screen and (min-width: 767px ) {
+  #root{
+    width: 450px;
+    margin: auto;
+  }
+}

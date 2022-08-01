@@ -11,6 +11,7 @@ export const fetchStatsThunk = createAsyncThunk(
   'stats/fetchStats',
   async () => {
     const { data } = await fetchStats();
+    Object.keys(data).map((key) => data[key].All.show = true);
     return data;
   },
 );

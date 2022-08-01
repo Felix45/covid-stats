@@ -8,7 +8,8 @@ const CountryList = (props) => {
 
   return (
     Object.keys(countries).map((country) => {
-      if (countries[country].All.continent === continent) {
+      if (countries[country].All.continent === continent
+          && countries[country].All.show) {
         return <Country key={uuidv4()} nation={countries[country].All} nations={nations} />;
       }
       return '';
