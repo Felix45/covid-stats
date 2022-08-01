@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
@@ -7,16 +7,26 @@ import Continent from './Continent';
 
 const ContinentList = (props) => {
   const { regions } = props;
+  const lastUpdated = useRef(new Date());
   const total = regions.reduce((prev, curr) => prev += curr.cases, 0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      lastUpdated.current = new Date();
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <Row>
       <Col xs={12} className="p-0 slider">
         <Card>
           <Card.Img src={`${process.env.PUBLIC_URL}/images/world.png`} />
-          <Card.Title data-testid="title" className="px-3 fw-bold">COVID WORLD STATS</Card.Title>
+          <Card.Title data-testid="title" className="px-3 fw-bold title-home">COVID-19 CASES WORLD WIDE</Card.Title>
           <Card.Text className="p-3 mb-0 fw-bold">
-            <strong>{`Cases: ${total.toLocaleString('en-US')}`}</strong>
+            {`Cases: ${total.toLocaleString('en-US')}`}
+            <br />
+            {`Updated: ${lastUpdated.current.toDateString()} ${lastUpdated.current.toLocaleTimeString('en-US')}`}
           </Card.Text>
         </Card>
       </Col>

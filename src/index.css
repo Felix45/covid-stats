@@ -72,6 +72,11 @@ select {
   position: absolute;
 }
 
+.slider .card-title.title-home {
+  top: unset;
+  bottom: 65px !important;
+}
+
 .title-strip {
   color: var(--white);
   background-color: var(--stripBlue);
