@@ -58,6 +58,9 @@ export const filterRanges = [
   { lower: 300001, higher: 500000 },
   { lower: 500001, higher: 1000000 },
   { lower: 1000001, higher: 2000000 },
+  { lower: 2000001, higher: 4000000 },
+  { lower: 4000001, higher: 5000000 },
+  { lower: 5000001, higher: 100000000 },
 ];
 
 export default continents;

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useSelector, useDispatch } from 'react-redux';
 import Col from 'react-bootstrap/Col';
@@ -15,6 +15,7 @@ const CountryView = () => {
   const dispatch = useDispatch();
 
   const { continent } = useParams();
+  const [filter, setFilter] = useState('');
   const { stats } = useSelector((state) => state.stats);
   const { countries } = useSelector((state) => state.countries);
 
@@ -24,6 +25,7 @@ const CountryView = () => {
 
   const handleReset = () => {
     dispatch(fetchStatsThunk());
+    setFilter('');
   };
 
   const handleCountries = (filterRange) => {
@@ -39,6 +41,8 @@ const CountryView = () => {
         && stats[stat].All.continent === continent) {
         newState[country] = { All: { ...stats[stat].All, show: true } };
       }
+      setFilter(`${lower.toLocaleString('en-US')} - ${higher.toLocaleString('en-US')}`);
+
       return newState;
     });
 
@@ -48,14 +52,19 @@ const CountryView = () => {
   return (
     <Container>
       <Row className="d-flex slider">
-        <Col xs={6} className="m-0 p-0">
+        <Col xs={5} className="m-0 p-0">
           <Card>
             <Card.Img className="p-3" src={`${process.env.PUBLIC_URL}/images/${continent.toLowerCase()}.png`} />
           </Card>
         </Col>
-        <Col xs={6} className="m-0 p-0 pos">
+        <Col xs={7} className="m-0 p-0 pos">
           <Card className="pos-rel">
-            <Card.Title>{ continent }</Card.Title>
+            <Card.Title>
+              { `Cases in ${continent}` }
+              <br />
+              {' '}
+              { filter }
+            </Card.Title>
           </Card>
         </Col>
         <Col xs={12} className="d-flex p-2 py-2 justify-content-between title-strip">
