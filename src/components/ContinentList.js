@@ -21,7 +21,7 @@ const ContinentList = (props) => {
     <Row>
       <Col xs={12} className="p-0 slider">
         <Card>
-          <Card.Img src={`${process.env.PUBLIC_URL}/images/world.png`} />
+          <Card.Img src={`${process.env.PUBLIC_URL}/images/world.svg`} />
           <Card.Title data-testid="title" className="px-3 fw-bold title-home">COVID-19 CASES WORLD WIDE</Card.Title>
           <Card.Text className="p-3 mb-0 fw-bold">
             {`Cases: ${total.toLocaleString('en-US')}`}

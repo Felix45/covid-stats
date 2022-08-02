@@ -9,7 +9,7 @@ import { useParams } from 'react-router-dom';
 import CountryList from './CountryList';
 import { fetchTitleThunk } from '../redux/slices/navbarSlice';
 import { filterRanges } from '../mock/data';
-import { filterCountries, fetchStatsThunk } from '../redux/slices/covidSlice';
+import { filterCountries, fetchStatsThunk, searchCountries } from '../redux/slices/covidSlice';
 
 const CountryView = () => {
   const dispatch = useDispatch();
@@ -26,6 +26,12 @@ const CountryView = () => {
   const handleReset = () => {
     dispatch(fetchStatsThunk());
     setFilter('');
+  };
+
+  const handleSearch = ({ target }) => {
+    const { value } = target;
+    setFilter('Country');
+    dispatch(searchCountries(value));
   };
 
   const handleCountries = (filterRange) => {
@@ -68,17 +74,17 @@ const CountryView = () => {
           </Card>
         </Col>
         <Col xs={12} className="d-flex p-2 py-2 justify-content-between title-strip">
-          <h5 className="m-0">Filter by cases</h5>
+          <h5 className="m-0">Filter By</h5>
           <button type="button" onClick={handleReset}>
             Reset Filter
             {' '}
             <span className="fa fa-retweet pt-1" />
           </button>
         </Col>
-        <Col className="p-2">
-          <select onChange={(e) => handleCountries(e.target.value)} className="d-block p-1">
+        <Col xs={6} className="p-2">
+          <select onChange={(e) => handleCountries(e.target.value)} className="p-1">
             <option value="{lower: 0, higher: 0}">
-              {`COVID Cases in ${continent}`}
+              {`Cases in ${continent}`}
             </option>
             {
               filterRanges.map((range) => (
@@ -92,6 +98,9 @@ const CountryView = () => {
               ))
             }
           </select>
+        </Col>
+        <Col xs={6} className="d-block p-2">
+          <input type="text" className="search px-2" placeholder="Search by country" onChange={(e) => { handleSearch(e); }} />
         </Col>
       </Row>
       <Row>
