@@ -23,6 +23,21 @@ const statsSlice = createSlice({
     filterCountries(state, action) {
       state.stats = action.payload;
     },
+    searchCountries(state, action) {
+      const searchItem = action.payload.toLowerCase();
+      const newState = {};
+      Object.keys(state.stats).map((stat) => {
+        const { country } = state.stats[stat].All;
+        newState[country] = { All: { ...state.stats[stat].All, show: false } };
+
+        const regex = new RegExp(searchItem.toLowerCase(), 'g');
+        if (country && country.toLowerCase().match(regex)) {
+          newState[country] = { All: { ...state.stats[stat].All, show: true } };
+        }
+        return newState[country];
+      });
+      state.stats = newState;
+    },
   },
   extraReducers: {
     [fetchStatsThunk.fulfilled]: (state, action) => {
@@ -34,5 +49,5 @@ const statsSlice = createSlice({
   },
 });
 
-export const { filterCountries } = statsSlice.actions;
+export const { filterCountries, searchCountries } = statsSlice.actions;
 export default statsSlice.reducer;

@@ -60,6 +60,10 @@ select {
   background-color: var(--sliderBlue);
 }
 
+.search {
+  width: 100%;
+}
+
 .slider .card {
   color: var(--white);
   border-radius: 0;
