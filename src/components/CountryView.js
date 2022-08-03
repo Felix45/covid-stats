@@ -17,6 +17,7 @@ const CountryView = () => {
   const { continent } = useParams();
   const [filter, setFilter] = useState('');
   const { stats } = useSelector((state) => state.stats);
+  const { vaccines } = useSelector((state) => state.vaccines);
   const { countries } = useSelector((state) => state.countries);
 
   useEffect(() => {
@@ -100,11 +101,16 @@ const CountryView = () => {
           </select>
         </Col>
         <Col xs={6} className="d-block p-2">
-          <input type="text" className="search px-2" placeholder="Search by country" onChange={(e) => { handleSearch(e); }} />
+          <input type="text" className="search px-2" placeholder="Search country" onChange={(e) => { handleSearch(e); }} />
         </Col>
       </Row>
       <Row>
-        <CountryList continent={continent} countries={stats} nations={countries} />
+        <CountryList
+          continent={continent}
+          countries={stats}
+          nations={countries}
+          vaccines={vaccines}
+        />
       </Row>
     </Container>
   );

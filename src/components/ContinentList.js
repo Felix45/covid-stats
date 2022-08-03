@@ -19,7 +19,7 @@ const ContinentList = (props) => {
 
   return (
     <Row>
-      <Col xs={12} className="p-0 slider">
+      <Col xs={12} className="p-0 pt-3 slider">
         <Card>
           <Card.Img src={`${process.env.PUBLIC_URL}/images/world.svg`} />
           <Card.Title data-testid="title" className="px-3 fw-bold title-home">COVID-19 CASES WORLD WIDE</Card.Title>

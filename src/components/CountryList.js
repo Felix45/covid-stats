@@ -4,13 +4,22 @@ import { v4 as uuidv4 } from 'uuid';
 import Country from './Country';
 
 const CountryList = (props) => {
-  const { countries, continent, nations } = props;
+  const {
+    countries, vaccines, continent, nations,
+  } = props;
 
   return (
     Object.keys(countries).map((country) => {
       if (countries[country].All.continent === continent
           && countries[country].All.show) {
-        return <Country key={uuidv4()} nation={countries[country].All} nations={nations} />;
+        return (
+          <Country
+            key={uuidv4()}
+            nation={countries[country].All}
+            nations={nations}
+            vaccines={vaccines}
+          />
+        );
       }
       return '';
     }));

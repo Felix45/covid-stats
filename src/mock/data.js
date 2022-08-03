@@ -31,7 +31,7 @@ const continents = [
     map: '',
     cases: 0,
     vaccinated: 0,
-    image: 'australia.svg',
+    image: 'oceania.svg',
   },
   {
     id: uuidv4(),
@@ -55,7 +55,7 @@ const continents = [
     map: '',
     cases: 0,
     vaccinated: 0,
-    image: 'australia.svg',
+    image: 'antarctica.svg',
   },
 ];
 
