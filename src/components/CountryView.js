@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useSelector, useDispatch } from 'react-redux';
 import Col from 'react-bootstrap/Col';
@@ -16,6 +16,7 @@ const CountryView = () => {
 
   const { continent } = useParams();
   const [filter, setFilter] = useState('');
+  const inputSearch = useRef();
   const { stats } = useSelector((state) => state.stats);
   const { vaccines } = useSelector((state) => state.vaccines);
   const { countries } = useSelector((state) => state.countries);
@@ -27,6 +28,7 @@ const CountryView = () => {
   const handleReset = () => {
     dispatch(fetchStatsThunk());
     setFilter('');
+    inputSearch.current.value = '';
   };
 
   const handleSearch = ({ target }) => {
@@ -59,12 +61,12 @@ const CountryView = () => {
   return (
     <Container>
       <Row className="d-flex slider">
-        <Col xs={5} className="m-0 p-0">
+        <Col xs={7} className="m-0 p-0">
           <Card>
             <Card.Img className="p-3" src={`${process.env.PUBLIC_URL}/images/${continent.toLowerCase()}.svg`} />
           </Card>
         </Col>
-        <Col xs={7} className="m-0 p-0 pos">
+        <Col xs={5} className="m-0 p-0 pos">
           <Card className="pos-rel">
             <Card.Title>
               { `Cases in ${continent}` }
@@ -101,7 +103,7 @@ const CountryView = () => {
           </select>
         </Col>
         <Col xs={6} className="d-block p-2">
-          <input type="text" className="search px-2" placeholder="Search country" onChange={(e) => { handleSearch(e); }} />
+          <input type="text" ref={inputSearch} className="search px-2" placeholder="Search country" onChange={(e) => { handleSearch(e); }} />
         </Col>
       </Row>
       <Row>

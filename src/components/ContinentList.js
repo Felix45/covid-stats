@@ -22,12 +22,14 @@ const ContinentList = (props) => {
       <Col xs={12} className="p-0 pt-3 slider">
         <Card>
           <Card.Img src={`${process.env.PUBLIC_URL}/images/world.svg`} />
-          <Card.Title data-testid="title" className="px-3 fw-bold title-home">COVID-19 CASES WORLD WIDE</Card.Title>
-          <Card.Text className="p-3 mb-0 fw-bold">
-            {`Cases: ${total.toLocaleString('en-US')}`}
-            <br />
-            {`Updated: ${lastUpdated.current.toDateString()} ${lastUpdated.current.toLocaleTimeString('en-US')}`}
-          </Card.Text>
+          <Card.Body className="px-0 pb-0">
+            <Card.Title data-testid="title" className="px-3 pb-0 fw-bold title-home">COVID-19 CASES WORLD WIDE</Card.Title>
+            <Card.Text className="p-3 mb-0 fw-bold">
+              {`Cases: ${total.toLocaleString('en-US')}`}
+              <br />
+              {`Updated: ${lastUpdated.current.toDateString()} ${lastUpdated.current.toLocaleTimeString('en-US')}`}
+            </Card.Text>
+          </Card.Body>
         </Card>
       </Col>
       <Col xs={12} className="p-3 py-2 title-strip">
