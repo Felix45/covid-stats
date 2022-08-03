@@ -6,6 +6,7 @@ const continents = [
     name: 'Africa',
     map: '',
     cases: 0,
+    vaccinated: 0,
     image: 'africa.svg',
   },
   {
@@ -13,6 +14,7 @@ const continents = [
     name: 'Asia',
     map: '',
     cases: 0,
+    vaccinated: 0,
     image: 'asia.png',
   },
   {
@@ -20,13 +22,15 @@ const continents = [
     name: 'Europe',
     map: '',
     cases: 0,
+    vaccinated: 0,
     image: 'europe.svg',
   },
   {
     id: uuidv4(),
-    name: 'Antarctica',
+    name: 'Oceania',
     map: '',
     cases: 0,
+    vaccinated: 0,
     image: 'australia.svg',
   },
   {
@@ -34,6 +38,7 @@ const continents = [
     name: 'North America',
     map: '',
     cases: 0,
+    vaccinated: 0,
     image: 'north america.svg',
   },
   {
@@ -41,13 +46,15 @@ const continents = [
     name: 'South America',
     map: '',
     cases: 0,
+    vaccinated: 0,
     image: 'south america.svg',
   },
   {
     id: uuidv4(),
-    name: 'Oceania',
+    name: 'Antarctica',
     map: '',
     cases: 0,
+    vaccinated: 0,
     image: 'australia.svg',
   },
 ];

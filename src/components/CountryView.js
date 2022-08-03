@@ -30,7 +30,7 @@ const CountryView = () => {
 
   const handleSearch = ({ target }) => {
     const { value } = target;
-    setFilter('Country');
+    setFilter('By country');
     dispatch(searchCountries(value));
   };
 
@@ -60,7 +60,7 @@ const CountryView = () => {
       <Row className="d-flex slider">
         <Col xs={5} className="m-0 p-0">
           <Card>
-            <Card.Img className="p-3" src={`${process.env.PUBLIC_URL}/images/${continent.toLowerCase()}.png`} />
+            <Card.Img className="p-3" src={`${process.env.PUBLIC_URL}/images/${continent.toLowerCase()}.svg`} />
           </Card>
         </Col>
         <Col xs={7} className="m-0 p-0 pos">

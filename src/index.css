@@ -116,21 +116,16 @@ select {
   background-color: transparent;
 }
 
-.country:nth-child(4n+1),
-.country:nth-child(4n) {
-  color: var(--white);
-  background-color: var(--rightMap);
-}
-
 .continent {
   color: var(--white);
   background-color: var(--sliderBlue);
 }
 
-.continent.asia,
-.continent.europe,
-.continent.south,
-.continent.oceania {
+.continent:nth-child(4n+1),
+.country:nth-child(4n+1),
+.continent:nth-child(4n),
+.country:nth-child(4n) {
+  color: var(--white);
   background-color: var(--rightMap);
 }
 

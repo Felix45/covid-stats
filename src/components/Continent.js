@@ -21,9 +21,9 @@ const Continent = (props) => {
           </div>
           <div className="fw-bold mx-3">
             <strong>
-              Cases
+              { `Cases ${region.cases.toLocaleString('en-US')}` }
               <br />
-              { region.cases.toLocaleString('en-US') }
+              { `Vaccinated ${region.vaccinated.toLocaleString('en-US')}` }
             </strong>
           </div>
         </Card.Body>
