@@ -6,6 +6,7 @@ import { fetchCountriesThunk } from '../redux/slices/countriesSlice';
 import { fetchTitleThunk } from '../redux/slices/navbarSlice';
 import ContinentList from './ContinentList';
 import continents from '../mock/data';
+import { fetchVaccinatedThunk } from '../redux/slices/vaccineSlice';
 
 const ContinentView = () => {
   const dispatch = useDispatch();
@@ -13,17 +14,22 @@ const ContinentView = () => {
   useEffect(() => {
     dispatch(fetchStatsThunk());
     dispatch(fetchCountriesThunk());
+    dispatch(fetchVaccinatedThunk());
     dispatch(fetchTitleThunk('World'));
   }, []);
 
   const [regions] = useState(continents);
   const { stats } = useSelector((state) => state.stats);
+  const { vaccines } = useSelector((state) => state.vaccines);
 
-  regions.forEach((region) => { region.cases = 0; });
+  regions.forEach((region) => { region.cases = 0; region.vaccinated = 0; });
 
   regions.map((region) => {
     Object.keys(stats).forEach((stat) => {
-      if (stats[stat].All.continent === region.name) region.cases += stats[stat].All.confirmed;
+      if (stats[stat].All.continent === region.name) {
+        region.cases += stats[stat].All.confirmed;
+        region.vaccinated += vaccines[stat] ? vaccines[stat].All.people_vaccinated : 0;
+      }
     });
     return region;
   });

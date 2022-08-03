@@ -6,8 +6,8 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import { NavLink } from 'react-router-dom';
 
 const Country = (props) => {
-  const { nation, nations } = props;
-  const { country, confirmed, deaths } = nation;
+  const { nation, nations, vaccines } = props;
+  const { country, confirmed } = nation;
 
   let countryFlag;
 
@@ -34,14 +34,15 @@ const Country = (props) => {
             <ListGroup>
               <ListGroup.Item className="px-2">
                 <strong>
-                  cases:
+                  Cases:
                   {confirmed.toLocaleString('en-US')}
                 </strong>
               </ListGroup.Item>
               <ListGroup.Item className="px-2">
                 <strong>
-                  fatalities:
-                  {deaths.toLocaleString('en-US')}
+                  Vaccinated:
+                  <br />
+                  {vaccines[country] ? vaccines[country].All.people_vaccinated.toLocaleString('en-US') : 0}
                 </strong>
               </ListGroup.Item>
             </ListGroup>
@@ -55,6 +56,7 @@ const Country = (props) => {
 Country.propTypes = {
   nation: PropTypes.instanceOf(Object).isRequired,
   nations: PropTypes.instanceOf(Array).isRequired,
+  vaccines: PropTypes.instanceOf(Object).isRequired,
 };
 
 export default Country;

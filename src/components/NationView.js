@@ -16,6 +16,7 @@ const NationView = () => {
 
   const { nation } = useParams();
   const { stats } = useSelector((state) => state.stats);
+  const { vaccines } = useSelector((state) => state.vaccines);
   const { countries } = useSelector((state) => state.countries);
 
   useEffect(() => {
@@ -56,7 +57,7 @@ const NationView = () => {
                   />
                   <Marker position={coords}>
                     <Popup>
-                      {nation}
+                      {nation.toUpperCase()}
                       {' '}
                       <br />
                       {' '}
@@ -65,34 +66,44 @@ const NationView = () => {
                   </Marker>
                 </MapContainer>
               </div>
-              <Table striped className="mt-4">
-                <tbody>
-                  <tr>
-                    <td>Cases</td>
-                    <td className="text-end">{ confirmed && confirmed.toLocaleString('en-US') }</td>
-                  </tr>
-                  <tr>
-                    <td>Fatalities</td>
-                    <td className="text-end">{ deaths && deaths.toLocaleString('en-US') }</td>
-                  </tr>
-                  <tr>
-                    <td>Continent</td>
-                    <td className="text-end">{ continent }</td>
-                  </tr>
-                </tbody>
-              </Table>
             </Card.Body>
           </Card>
         </Col>
       </Row>
       <Row>
         <Col xs={12} className="m-0 my-3 p-0">
-          <h5 className="title-strip p-2 mb-0">{`More about ${nation} ${countryFlag}`}</h5>
           <Table table striped>
             <tbody>
               <tr>
+                <td colSpan={2}>{`More about ${nation} ${countryFlag}`}</td>
+              </tr>
+              <tr>
                 <td>Population</td>
                 <td className="text-end">{ population && population.toLocaleString('en-US') }</td>
+              </tr>
+              <tr>
+                <td>Cases</td>
+                <td className="text-end">{ confirmed && confirmed.toLocaleString('en-US') }</td>
+              </tr>
+              <tr>
+                <td>Administered doses</td>
+                <td className="text-end">{ vaccines[nation] && vaccines[nation].All.administered.toLocaleString('en-US') }</td>
+              </tr>
+              <tr>
+                <td>Vaccinated</td>
+                <td className="text-end">{ vaccines[nation] && vaccines[nation].All.people_vaccinated.toLocaleString('en-US') }</td>
+              </tr>
+              <tr>
+                <td>Partially Vaccinated</td>
+                <td className="text-end">{ vaccines[nation] && vaccines[nation].All.people_partially_vaccinated.toLocaleString('en-US') }</td>
+              </tr>
+              <tr>
+                <td>Fatalities</td>
+                <td className="text-end">{ deaths && deaths.toLocaleString('en-US') }</td>
+              </tr>
+              <tr>
+                <td>Continent</td>
+                <td className="text-end">{ continent }</td>
               </tr>
               <tr>
                 <td>Affected Population</td>

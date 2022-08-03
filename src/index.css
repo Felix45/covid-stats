@@ -60,6 +60,10 @@ select {
   background-color: var(--sliderBlue);
 }
 
+.search {
+  width: 100%;
+}
+
 .slider .card {
   color: var(--white);
   border-radius: 0;
@@ -70,6 +74,11 @@ select {
 .slider .card-title {
   top: 65px;
   position: absolute;
+}
+
+.slider .card-title.title-home {
+  top: unset;
+  bottom: 65px !important;
 }
 
 .title-strip {
@@ -107,21 +116,16 @@ select {
   background-color: transparent;
 }
 
-.country:nth-child(4n+1),
-.country:nth-child(4n) {
-  color: var(--white);
-  background-color: var(--rightMap);
-}
-
 .continent {
   color: var(--white);
   background-color: var(--sliderBlue);
 }
 
-.continent.asia,
-.continent.europe,
-.continent.south,
-.continent.oceania {
+.continent:nth-child(4n+1),
+.country:nth-child(4n+1),
+.continent:nth-child(4n),
+.country:nth-child(4n) {
+  color: var(--white);
   background-color: var(--rightMap);
 }
 
@@ -160,4 +164,11 @@ select {
 
 .fa-arrow-circle-right {
   color: var(--white);
+}
+
+@media screen and (min-width: 767px) {
+  #root {
+    width: 450px;
+    margin: auto;
+  }
 }
