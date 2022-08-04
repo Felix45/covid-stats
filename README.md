@@ -13,7 +13,7 @@
 ## Live Demo
 |Netlify cloud hosting|
 |----------------------|
-|[View live demo](https://deploy-preview-9--imaginative-liger-4aee95.netlify.app/)|
+|[View live demo](https://imaginative-liger-4aee95.netlify.app/)|
 
 ## Demo Video link
 |Link to demo video|
