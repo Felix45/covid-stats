@@ -61,12 +61,12 @@ const CountryView = () => {
   return (
     <Container>
       <Row className="d-flex slider">
-        <Col xs={7} className="m-0 p-0">
+        <Col xs={7} md={6} className="m-0 p-0">
           <Card>
             <Card.Img className="p-3" src={`${process.env.PUBLIC_URL}/images/${continent.toLowerCase()}.svg`} />
           </Card>
         </Col>
-        <Col xs={5} className="m-0 p-0 pos">
+        <Col xs={5} md={6} className="m-0 p-0 pos">
           <Card className="pos-rel">
             <Card.Title>
               { `Cases in ${continent}` }

@@ -25,6 +25,7 @@ header {
   position: sticky;
   color: var(--white);
   background-color: var(--menuBarBlue);
+  font-family: 'COCOGOOSE', sans-serif;
   box-shadow: 2px 2px 5px var(--menuBarBlue);
 }
 
@@ -70,6 +71,11 @@ select {
 .slider .card-title.title-home {
   top: unset;
   bottom: 65px !important;
+}
+
+.card-body h2,
+.card-title {
+  font-family: 'COCOGOOSE', sans-serif;
 }
 
 .title-strip {
@@ -162,6 +168,14 @@ select {
   .card-title.h5 {
     font-size: 3em;
     font-family: 'COCOGOOSE', sans-serif;
+  }
+
+  .slider .card-title {
+    top: 150px;
+  }
+
+  .country .card {
+    border-bottom: 1px solid var(--sliderBlue);
   }
 
   .card-img {

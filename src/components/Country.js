@@ -7,12 +7,15 @@ import { NavLink } from 'react-router-dom';
 
 const Country = (props) => {
   const { nation, nations, vaccines } = props;
-  const { country, confirmed } = nation;
+  const { country, confirmed, abbreviation } = nation;
 
   let countryFlag;
 
   nations.forEach((item) => {
-    if (item.name.common === country) {
+    if (item.name.common === country
+      || item.cca2 === country
+      || item.cca2 === abbreviation
+      || item.altSpellings.includes(country)) {
       countryFlag = item.flag;
     }
   });
