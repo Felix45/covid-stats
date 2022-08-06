@@ -15,7 +15,7 @@ const continents = [
     map: '',
     cases: 0,
     vaccinated: 0,
-    image: 'asia.png',
+    image: 'asia.svg',
   },
   {
     id: uuidv4(),
