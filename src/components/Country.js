@@ -18,7 +18,7 @@ const Country = (props) => {
   });
 
   return (
-    <Col xs={6} className="mx-0 p-0 country">
+    <Col xs={6} md={3} className="mx-0 p-0 country">
       <Card className="p-2">
         <NavLink to={`/country/${country}`} className="d-flex justify-content-between text-decoration-none">
           <Card.Title>

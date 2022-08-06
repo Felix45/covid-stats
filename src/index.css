@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/cocogoose');
 
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Lato', sans-serif;
+  font-family: 'COCOGOOSE', sans-serif;
 }
 
 :root {
@@ -14,16 +15,6 @@ body {
   --stripBlue: #35548b;
   --leftMap: #446ab3;
   --rightMap: #4063a5;
-}
-
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
 }
 
 header {
@@ -102,6 +93,7 @@ select {
 .country .card .card-title {
   font-size: 18px;
   color: var(--white);
+  font-family: 'COCOGOOSE', sans-serif;
 }
 
 .country .card .card-header {
@@ -166,9 +158,25 @@ select {
   color: var(--white);
 }
 
-@media screen and (min-width: 767px) {
-  #root {
-    width: 450px;
-    margin: auto;
+@media screen and (min-width: 1024px) {
+  .card-title.h5 {
+    font-size: 3em;
+    font-family: 'COCOGOOSE', sans-serif;
+  }
+
+  .card-img {
+    height: 439px;
+  }
+
+  .continent:nth-child(2n),
+  .country:nth-child(2n) {
+    color: var(--white);
+    background-color: var(--sliderBlue);
+  }
+
+  .continent:nth-child(2n+1),
+  .country:nth-child(2n+1) {
+    color: var(--white);
+    background-color: var(--rightMap);
   }
 }
