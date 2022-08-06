@@ -63,6 +63,11 @@ select {
   background-color: transparent;
 }
 
+.card-body h2,
+.card-title {
+  font-family: 'COCOGOOSE', sans-serif;
+}
+
 .slider .card-title {
   top: 65px;
   position: absolute;
@@ -71,11 +76,6 @@ select {
 .slider .card-title.title-home {
   top: unset;
   bottom: 65px !important;
-}
-
-.card-body h2,
-.card-title {
-  font-family: 'COCOGOOSE', sans-serif;
 }
 
 .title-strip {
@@ -176,10 +176,6 @@ select {
 
   .country .card {
     border-bottom: 1px solid var(--sliderBlue);
-  }
-
-  .card-img {
-    height: 439px;
   }
 
   .continent:nth-child(2n),
