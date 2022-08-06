@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/cocogoose');
 
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Lato', sans-serif;
+  font-family: 'COCOGOOSE', sans-serif;
 }
 
 :root {
@@ -16,16 +17,6 @@ body {
   --rightMap: #4063a5;
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
-}
-
 header {
   top: 0;
   left: 0;
@@ -34,6 +25,7 @@ header {
   position: sticky;
   color: var(--white);
   background-color: var(--menuBarBlue);
+  font-family: 'COCOGOOSE', sans-serif;
   box-shadow: 2px 2px 5px var(--menuBarBlue);
 }
 
@@ -71,6 +63,11 @@ select {
   background-color: transparent;
 }
 
+.card-body h2,
+.card-title {
+  font-family: 'COCOGOOSE', sans-serif;
+}
+
 .slider .card-title {
   top: 65px;
   position: absolute;
@@ -102,6 +99,7 @@ select {
 .country .card .card-title {
   font-size: 18px;
   color: var(--white);
+  font-family: 'COCOGOOSE', sans-serif;
 }
 
 .country .card .card-header {
@@ -166,9 +164,29 @@ select {
   color: var(--white);
 }
 
-@media screen and (min-width: 767px) {
-  #root {
-    width: 450px;
-    margin: auto;
+@media screen and (min-width: 1024px) {
+  .card-title.h5 {
+    font-size: 3em;
+    font-family: 'COCOGOOSE', sans-serif;
+  }
+
+  .slider .card-title {
+    top: 150px;
+  }
+
+  .country .card {
+    border-bottom: 1px solid var(--sliderBlue);
+  }
+
+  .continent:nth-child(2n),
+  .country:nth-child(2n) {
+    color: var(--white);
+    background-color: var(--sliderBlue);
+  }
+
+  .continent:nth-child(2n+1),
+  .country:nth-child(2n+1) {
+    color: var(--white);
+    background-color: var(--rightMap);
   }
 }

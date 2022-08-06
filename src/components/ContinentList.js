@@ -9,6 +9,7 @@ const ContinentList = (props) => {
   const { regions } = props;
   const lastUpdated = useRef(new Date());
   const total = regions.reduce((prev, curr) => prev += curr.cases, 0);
+  const vaccinated = regions.reduce((prev, curr) => prev += curr.vaccinated, 0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -27,7 +28,7 @@ const ContinentList = (props) => {
             <Card.Text className="p-3 mb-0 fw-bold">
               {`Cases: ${total.toLocaleString('en-US')}`}
               <br />
-              {`Updated: ${lastUpdated.current.toDateString()} ${lastUpdated.current.toLocaleTimeString('en-US')}`}
+              {`Vaccinated: ${vaccinated.toLocaleString('en-US')}`}
             </Card.Text>
           </Card.Body>
         </Card>

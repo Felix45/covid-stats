@@ -25,14 +25,17 @@ const NationView = () => {
 
   const {
     confirmed, deaths, population, life_expectancy: lifeExpectancy, continent,
-    capital,
+    capital, abbreviation,
   } = stats[nation].All;
 
   let countryFlag;
   let coords = {};
 
   countries.forEach((item) => {
-    if (item.name.common === nation) {
+    if (item.name.common === nation
+      || item.cca2 === nation
+      || item.cca2 === abbreviation
+      || item.altSpellings.includes(nation)) {
       countryFlag = item.flag;
       coords = { lat: item.latlng[0], lng: item.latlng[1] };
     }
@@ -86,7 +89,7 @@ const NationView = () => {
                 <td className="text-end">{ confirmed && confirmed.toLocaleString('en-US') }</td>
               </tr>
               <tr>
-                <td>Administered doses</td>
+                <td>Administered vaccine doses</td>
                 <td className="text-end">{ vaccines[nation] && vaccines[nation].All.administered.toLocaleString('en-US') }</td>
               </tr>
               <tr>

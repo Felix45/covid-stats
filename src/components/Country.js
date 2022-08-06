@@ -7,18 +7,21 @@ import { NavLink } from 'react-router-dom';
 
 const Country = (props) => {
   const { nation, nations, vaccines } = props;
-  const { country, confirmed } = nation;
+  const { country, confirmed, abbreviation } = nation;
 
   let countryFlag;
 
   nations.forEach((item) => {
-    if (item.name.common === country) {
+    if (item.name.common === country
+      || item.cca2 === country
+      || item.cca2 === abbreviation
+      || item.altSpellings.includes(country)) {
       countryFlag = item.flag;
     }
   });
 
   return (
-    <Col xs={6} className="mx-0 p-0 country">
+    <Col xs={6} md={3} className="mx-0 p-0 country">
       <Card className="p-2">
         <NavLink to={`/country/${country}`} className="d-flex justify-content-between text-decoration-none">
           <Card.Title>

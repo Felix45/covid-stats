@@ -36,7 +36,7 @@ const ContinentView = () => {
 
   return (
     <Container>
-      <ContinentList stats={stats} regions={regions} />
+      <ContinentList stats={stats} regions={regions} vaccines={vaccines} />
     </Container>
   );
 };
