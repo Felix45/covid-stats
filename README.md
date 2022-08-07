@@ -23,8 +23,6 @@
 ## Application ScreenShot
 ![Homepage](/public/images/app.png)
 ![Country listing page](/public/images/app2.png)
-![Country listing page](/public/images/app3.png)
-
 
 ## Getting Started
 
