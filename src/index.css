@@ -68,6 +68,15 @@ select {
   font-family: 'COCOGOOSE', sans-serif;
 }
 
+.card-body h2,
+.country .card-title {
+  font-size: 1.2em;
+}
+
+.country .card-title {
+  font: 15px 'Lato', sans-serif;
+}
+
 .slider .card-title {
   top: 65px;
   position: absolute;
@@ -97,9 +106,8 @@ select {
 }
 
 .country .card .card-title {
-  font-size: 18px;
   color: var(--white);
-  font-family: 'COCOGOOSE', sans-serif;
+  font: bold 18px 'Lato', sans-serif;
 }
 
 .country .card .card-header {
